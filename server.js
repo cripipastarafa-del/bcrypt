@@ -19,13 +19,11 @@ bcrypt.hash(myPlaintextPassword, saltRounds, (err, hash) => {
 //END_ASYNC
 
 //START_SYNC
-let hash = bcrypt.hashSync(myPlaintextPassword, saltRounds);
-console.log(hash);
-
+var hash = bcrypt.hashSync(myPlaintextPassword, saltRounds)
+console.log("🔐 Hash síncrono:", hash)
 //END_SYNC
-let result = bcrypt.compareSync(myPlaintextPassword, hash);
-console.log(result);
-
+var result = bcrypt.compareSync(myPlaintextPassword, hash)
+console.log("✅ ¿Coincide?:", result)
 
 
 
